@@ -5,13 +5,14 @@
 let today1 = new Date();
 let day1 = today1.toLocaleString('en-us', { weekday: 'long' });
 let time1 = today1.toLocaleTimeString();
-console.log(`Today is : ${day1}.`);
-console.log(`Current time is : ${time1}`);
+// console.log(`Today is : ${day1}.`);
+// console.log(`Current time is : ${time1}`);
+
 
 // 2. Write a JavaScript program to print the current window contents.  
-// function printWindow() {
-//     window.print();
-// }
+function printWindow() {
+    window.print();
+}
 
 // console.log(printWindow());
 
@@ -20,35 +21,33 @@ console.log(`Current time is : ${time1}`);
 // mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
 
 let today2 = new Date();
-
-// Extract the components
 let month = String(today2.getMonth() + 1).padStart(2, '0'); 
 let day = String(today2.getDate()).padStart(2, '0');        
 let year = today2.getFullYear();                            
 
 let formattedDate = `${month}-${day}-${year}`;
 
-console.log(formattedDate); 
+// console.log(formattedDate); 
 
 
 // 4. Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.  
 function triangleArea(a, b, c) {
-    let s = (a + b + c) / 2
-    let area = Math.sqrt((s - a)*(s - b)*(s - c))
-    return area
+    let s = (a + b + c) / 2;
+    let area = Math.sqrt((s - a)*(s - b)*(s - c));
+    return area;
 }
-console.log(triangleArea(5, 6, 7)); 
+// console.log(triangleArea(5, 6, 7)); 
 
 
 // -----------// 5. Write a JavaScript program to rotate the string 'w3resource' in the right direction. This is done by periodically removing one letter from the string end and attaching it to the front.  
-// function rotate(word){
-//     let iter = word.length - 1;
-//     for (let i = iter; i > 0; i--) {
-//         word = word[i] + word
-//         word = word.slice(0, i + 1);
-//     }
-//     return word
-// }
+function rotate(word){
+    let iter = word.length - 1;
+    for (let i = iter; i > 0; i--) {
+        word = word[i] + word;
+        word = word.slice(0, i + 1);
+    }
+    return word;
+}
 
 // console.log(rotate("cat")); 
 
@@ -57,37 +56,81 @@ console.log(triangleArea(5, 6, 7));
 // 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.  
 function leapYear(year){
     if (year % 100 === 0 && year % 400 !== 0  ){
-        return `${year} is not a leap year`
+        return `${year} is not a leap year`;
     } else if (year % 4 === 0 ) {
-        return `${year} is a leap year`
+        return `${year} is a leap year`;
     } else {
-        return `${year} is not a leap year`
+        return `${year} is not a leap year`;
 
     }
 }
 
-console.log(leapYear(400)); 
+// console.log(leapYear(400)); 
 
 
 // 7. Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.  
 
 
-// 8. Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number. The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched".  
+// 8. Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number. The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched". 
+
+function guessRandomInt1 () {
+    let randomInt1 = Math.floor(Math.random() * (10 - 1)) + 1;
+    console.log(randomInt1);
+    let guessInt;
+
+    while (guessInt !== randomInt1){
+        guessInt = Number(prompt('guess a number'))
+        if (guessInt === randomInt1) {
+            alert("Good Work");
+            return 0;
+        } else {
+            alert("Not matched");
+        }
+    }
+}
+
+// console.log(guessRandomInt1())
 
 
 // 9. Write a JavaScript program to calculate the days left before Christmas.  
+
 
 
 // 10. Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).  
 // Sample form :
 // sample form
 
+enterInt1 = Number(prompt('enter a number'))
+enterInt2 = Number(prompt('enter an operator'))
+function multiplyDivide (int1, int2) {
+    let multiply = int1 * int2;
+    let division = int1 / int2;
+    return `result for multiplication is ${multiply} and result for division is ${division}`
+}
+
+// console.log(multiplyDivide (enterInt1, enterInt2))
 
 // 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  
 // [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
 // Expected Output :
 // 60°C is 140 °F
 // 45°F is 7.222222222222222°C
+function convertTemp () {
+    let question = prompt(`if you want to convert Celsius to Fahrenheit enter "c", if Fahrenheit to Celsius enter "f"`);
+    let number = Number(prompt("enter temperature"));
+    if (question === "c") {
+        let fahrenheit = number / 5 * 9 + 32
+        return `tempriture is ${fahrenheit} ferenheit`;
+    }else if(question === "f") {
+        let celsius = (number - 32) / 9 * 5;
+        return `tempriture is ${celsius} celsius`;
+    }else{
+        alert (`please enter lowercase c or f and a number in temperature box`)
+        convertTemp()
+    }
+}
+
+// console.log(convertTemp())
 
 
 // 12. Write a JavaScript program to get the website URL (loading page).  
