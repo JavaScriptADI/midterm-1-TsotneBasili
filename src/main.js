@@ -132,24 +132,100 @@ function convertTemp () {
 
 
 // 12. Write a JavaScript program to get the website URL (loading page).  
-
+let currentURL = window.location.href;
+// console.log("The current page URL is:", currentURL);
 
 // 13. Write a JavaScript exercise to create a variable using a user-defined name.  
+function creatingVariable() {
+    let variableName = prompt(`enter variable name`);
+
+    let variableValue = prompt(`enter variable value`);
+    let dynamicVariables = {};
+    dynamicVariables[variableName] = variableValue;
+    console.log("Variable Name:", variableName);
+    console.log("Variable Value:", dynamicVariables[variableName]);
+}
+
+// creatingVariable()
 
 
 // 14. Write a JavaScript exercise to get the filename extension.  
+function fileExt() {
+    let fileName = prompt(`enter full file name with extention`);
+    let ext = ''
+    for (let i = 0; i < fileName.length; i++) {
+        if (fileName[i] === ".")
+            ext += fileName.slice(fileName[i])
+    }
+    return  `file extention is ${ext}`;
+}
+
+// console.log(fileExt())
 
 
 // 15. Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference.  
+function difference() {
+    let number = prompt(`enter a number`);
+    if (number > 13) {
+        result = Math.abs(number - 13) * 2;
+        return  `double difference is ${result}`;
+    }else {
+        result = Math.abs(number - 13);
+        return  `difference is ${result}`;
+    }
+    
+}
+
+// console.log(difference())
+
 
 
 // 16. Write a JavaScript program to compute the sum of the two given integers. If the two values are the same, then return triple their sum.  
+function sum() {
+    let sum = 0;
+    let number1 = Number(prompt(`enter a number`));
+    let number2 = Number(prompt(`enter a number`));
+    if (number1 === number2) {
+        sum = (number1 + number2) * 3;
+        return  `the sum is ${sum}`;
+    }else {
+        sum = number1 + number2;
+        return  `the sum is ${sum}`;
+    }
+    
+}
 
+// console.log(sum())
 
 // 17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple the absolute difference if the specified number is greater than 19.  
+function difference2() {
+    let number = prompt(`enter a number`);
+    if (number > 19) {
+        result = Math.abs(number - 13) * 3;
+        return  `double difference is ${result}`;
+    }else {
+        result = Math.abs(number - 13);
+        return  `difference is ${result}`;
+    }
+    
+}
+
+// console.log(difference2())
+
 
 
 // 18. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.  
+function check() {
+    let number1 = Number(prompt(`enter a number`));
+    let number2 = Number(prompt(`enter a number`));
+    if (number1 === 50 || number2 === 50 || number1 + number2 === 50){
+        return true
+    } else {
+        return false
+    }
+}
+
+// console.log(check())
 
 
 // 19. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.  
