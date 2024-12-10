@@ -72,7 +72,6 @@ function leapYear(year){
 
 
 // 8. Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number. The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched". 
-
 function guessRandomInt1 () {
     let randomInt1 = Math.floor(Math.random() * (10 - 1)) + 1;
     console.log(randomInt1);
@@ -99,16 +98,15 @@ function guessRandomInt1 () {
 // 10. Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).  
 // Sample form :
 // sample form
-
-enterInt1 = Number(prompt('enter a number'))
-enterInt2 = Number(prompt('enter an operator'))
-function multiplyDivide (int1, int2) {
+function multiplyDivide () {
+    int1 = Number(prompt('enter first number'))
+    int2 = Number(prompt('enter second number'))
     let multiply = int1 * int2;
     let division = int1 / int2;
     return `result for multiplication is ${multiply} and result for division is ${division}`
 }
 
-// console.log(multiplyDivide (enterInt1, enterInt2))
+// console.log(multiplyDivide ())
 
 // 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  
 // [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
