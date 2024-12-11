@@ -99,8 +99,8 @@ function guessRandomInt1 () {
 // Sample form :
 // sample form
 function multiplyDivide () {
-    int1 = Number(prompt('enter first number'));
-    int2 = Number(prompt('enter second number'));
+    let int1 = Number(prompt('enter first number'));
+    let int2 = Number(prompt('enter second number'));
     let multiply = int1 * int2;
     let division = int1 / int2;
     return `result for multiplication is ${multiply} and result for division is ${division}`;
@@ -166,6 +166,7 @@ function fileExt() {
 // 15. Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference.  
 function difference() {
     let number = prompt(`enter a number`);
+    let result = 0;
     if (number > 13) {
         result = Math.abs(number - 13) * 2;
         return  `double difference is ${result}`;
@@ -200,6 +201,7 @@ function sum() {
 // 17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple the absolute difference if the specified number is greater than 19.  
 function difference2() {
     let number = prompt(`enter a number`);
+    let result = 0
     if (number > 19) {
         result = Math.abs(number - 13) * 3;
         return  `double difference is ${result}`;
