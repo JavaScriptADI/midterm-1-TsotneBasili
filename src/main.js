@@ -117,7 +117,7 @@ function convertTemp () {
     let question = prompt(`if you want to convert Celsius to Fahrenheit enter "c", if Fahrenheit to Celsius enter "f"`);
     let number = Number(prompt("enter temperature"));
     if (question === "c") {
-        let fahrenheit = number / 5 * 9 + 32
+        let fahrenheit = number / 5 * 9 + 32;
         return `tempriture is ${fahrenheit} ferenheit`;
     }else if(question === "f") {
         let celsius = (number - 32) / 9 * 5;
