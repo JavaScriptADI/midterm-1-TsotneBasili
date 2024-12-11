@@ -78,7 +78,7 @@ function guessRandomInt1 () {
     let guessInt;
 
     while (guessInt !== randomInt1){
-        guessInt = Number(prompt('guess a number'))
+        guessInt = Number(prompt('guess a number'));
         if (guessInt === randomInt1) {
             alert("Good Work");
             return 0;
@@ -99,14 +99,14 @@ function guessRandomInt1 () {
 // Sample form :
 // sample form
 function multiplyDivide () {
-    int1 = Number(prompt('enter first number'))
-    int2 = Number(prompt('enter second number'))
+    int1 = Number(prompt('enter first number'));
+    int2 = Number(prompt('enter second number'));
     let multiply = int1 * int2;
     let division = int1 / int2;
-    return `result for multiplication is ${multiply} and result for division is ${division}`
+    return `result for multiplication is ${multiply} and result for division is ${division}`;
 }
 
-// console.log(multiplyDivide ())
+// console.log(multiplyDivide ());
 
 // 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  
 // [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
@@ -123,12 +123,12 @@ function convertTemp () {
         let celsius = (number - 32) / 9 * 5;
         return `tempriture is ${celsius} celsius`;
     }else{
-        alert (`please enter lowercase c or f and a number in temperature box`)
-        convertTemp()
+        alert (`please enter lowercase c or f and a number in temperature box`);
+        convertTemp();
     }
 }
 
-// console.log(convertTemp())
+// console.log(convertTemp());
 
 
 // 12. Write a JavaScript program to get the website URL (loading page).  
@@ -146,21 +146,21 @@ function creatingVariable() {
     console.log("Variable Value:", dynamicVariables[variableName]);
 }
 
-// creatingVariable()
+// creatingVariable();
 
 
 // 14. Write a JavaScript exercise to get the filename extension.  
 function fileExt() {
     let fileName = prompt(`enter full file name with extention`);
-    let ext = ''
+    let ext = '';
     for (let i = 0; i < fileName.length; i++) {
-        if (fileName[i] === ".")
-            ext += fileName.slice(fileName[i])
+        if (fileName[i] === ".");
+            ext += fileName.slice(fileName[i]);
     }
     return  `file extention is ${ext}`;
 }
 
-// console.log(fileExt())
+// console.log(fileExt());
 
 
 // 15. Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference.  
@@ -176,7 +176,7 @@ function difference() {
     
 }
 
-// console.log(difference())
+// console.log(difference());
 
 
 
@@ -195,7 +195,7 @@ function sum() {
     
 }
 
-// console.log(sum())
+// console.log(sum());
 
 // 17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple the absolute difference if the specified number is greater than 19.  
 function difference2() {
@@ -210,7 +210,7 @@ function difference2() {
     
 }
 
-// console.log(difference2())
+// console.log(difference2());
 
 
 
@@ -219,13 +219,13 @@ function check() {
     let number1 = Number(prompt(`enter a number`));
     let number2 = Number(prompt(`enter a number`));
     if (number1 === 50 || number2 === 50 || number1 + number2 === 50){
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
-// console.log(check())
+// console.log(check());
 
 
 // 19. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.  
