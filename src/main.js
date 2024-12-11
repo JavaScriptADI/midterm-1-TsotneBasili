@@ -131,11 +131,11 @@ function convertTemp () {
 // console.log(convertTemp());
 
 
-// 12. Write a JavaScript program to get the website URL (loading page).  
+// 12. Write a JavaScript program to get the website URL (loading page).
 let currentURL = window.location.href;
 // console.log("The current page URL is:", currentURL);
 
-// 13. Write a JavaScript exercise to create a variable using a user-defined name.  
+// 13. Write a JavaScript exercise to create a variable using a user-defined name.
 function creatingVariable() {
     let variableName = prompt(`enter variable name`);
 
@@ -149,7 +149,7 @@ function creatingVariable() {
 // creatingVariable();
 
 
-// 14. Write a JavaScript exercise to get the filename extension.  
+// 14. Write a JavaScript exercise to get the filename extension.
 function fileExt() {
     let fileName = prompt(`enter full file name with extention`);
     let ext = '';
@@ -163,7 +163,7 @@ function fileExt() {
 // console.log(fileExt());
 
 
-// 15. Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference.  
+// 15. Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference.
 function difference() {
     let number = prompt(`enter a number`);
     let result = 0;
@@ -201,7 +201,7 @@ function sum() {
 // 17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple the absolute difference if the specified number is greater than 19.  
 function difference2() {
     let number = prompt(`enter a number`);
-    let result = 0
+    let result = 0;
     if (number > 19) {
         result = Math.abs(number - 13) * 3;
         return  `double difference is ${result}`;
