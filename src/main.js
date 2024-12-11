@@ -151,34 +151,33 @@ function creatingVariable() {
 
 // 14. Write a JavaScript exercise to get the filename extension.
 function fileExt() {
-    let fileName = prompt(`enter full file name with extention`);
+    let fileName = prompt(`Enter full file name with extension`);
     let ext = '';
     for (let i = 0; i < fileName.length; i++) {
-        if (fileName[i] === ".");
-            ext += fileName.slice(fileName[i]);
+        if (fileName[i] === ".") {
+            ext = fileName.slice(i + 1);
+            break;
+        }
     }
-    return  `file extention is ${ext}`;
+    return `File extension is ${ext}`;
 }
 
 // console.log(fileExt());
 
-
-// 15. Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference.
+// 15. Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.
 function difference() {
-    let number = prompt(`enter a number`);
+    let number = prompt(`Enter a number`);
     let result = 0;
     if (number > 13) {
         result = Math.abs(number - 13) * 2;
-        return  `double difference is ${result}`;
-    }else {
+        return `Double difference is ${result}`;
+    } else {
         result = Math.abs(number - 13);
-        return  `difference is ${result}`;
+        return `Difference is ${result}`;
     }
-    
 }
 
 // console.log(difference());
-
 
 
 // 16. Write a JavaScript program to compute the sum of the two given integers. If the two values are the same, then return triple their sum.  
