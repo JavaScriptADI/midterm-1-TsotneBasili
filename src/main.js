@@ -233,39 +233,146 @@ function check() {
 
 
 // 20. Write a JavaScript program to check two given integers whether one is positive and another one is negative.  
+function checkPosNeg(numb1, numb2){
+    if (numb1 > 0 && numb2 < 0) {
+        return true;
+    } else{
+        return false;
+    }
+}
+// console.log(checkPosNeg(1, -2));
 
 
 // 21. Write a JavaScript program to create another string by adding "Py" in front of a given string. If the given string begins with "Py" return the original string.  
+function addPy(str){
+    if (str[0] === 'P' && str[1] === 'y'){
+        return str;
+    } else{
+        let newStr = 'Py' + str;
+        return newStr;
+    }
+}
 
+// console.log(addPy("string"))
 
 // 22. Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.  
+function moveChar(str, index){
+    let newStr = str.slice(0, index) + str.slice(index + 1);
+    return newStr;
+}
+
+// console.log(moveChar('str', 0))
 
 
 // 23. Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.  
+function positionChange(str){
+    if (str.length < 1) {
+        return 'The string length must be broader than or equal to 1.';
+    } else{
+        let newStr = str[str.length - 1] + str.slice(1, str.length - 1) + str[0];
+        return newStr;
+    }
+}
+
+// console.log(positionChange('kuiolj'))
 
 
 // 24. Write a JavaScript program to create another string from a given string with the first character of the given string added to the front and back.  
+function addFirstChar(str) {
+    let newStr = str[0] + str.slice(0, str.length) + str[0];
+    return newStr;
+}
+
+// console.log(addFirstChar("str"));
 
 
 // 25. Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.  
+function checkMultiple(num) {
+    if (num % 3 === 0 && num % 7 === 0){
+        return 'number is multiple of both 3 and 7';
+    } else if(num % 3 === 0){
+        return 'number is multiple of 3';
+    } else if(num % 7 === 0){
+        return 'number is multiple of 7';
+    } else {
+        return 'number is multiple of none of 3 or 7';
+    }
+}
+
+// console.log(checkMultiple(4))
 
 
 // 26. Write a JavaScript program to create a string from a given string. This is done by taking the last 3 characters and adding them at both the front and back. The string length must be 3 or more.  
+function addLast3Char(str) {
+    let newStr = str.slice(str.length - 3, str.length) + str.slice(0, str.length) + str.slice(str.length - 3, str.length);
+    return newStr;
+}
+
+// console.log(addLast3Char("strabc"))
 
 
 // 27. Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.  
+function checktext(str){
+    if (str.slice(0, 4) === "Java") {
+        return true;
+    } else{
+        return false;
+    }
+}
+
+// console.log(checktext("Javascr"));
 
 
 // 28. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them falls within the range.  
+function checkNum1(num1, num2){
+    if ((55 <= num1 && num1 <= 99) || (55 <= num2 && num2 <= 99)) {
+        return true
+    } else {
+        return false
+    }
+}
+
+// console.log(checkNum1(53, 55));
 
 
 // 29. Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the specified range.  
+function checkNum2(num1, num2, num3){
+    if ((55 <= num1 && num1 <= 99) || (55 <= num2 && num2 <= 99) || (55 <= num3 && num3 <= 99)){
+        return true
+    } else {
+        return false
+    }
+}
+
+// console.log(checkNum2(53, 12, 55));
 
 
 // 30. Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string. If "Script" appears in the string, return the string without "Script" otherwise return the original one.  
+function checkScript(str){
+    if (str.slice(4, 10) === "Script"){
+        let newStr = str.slice(0, 4) + str.slice(10);
+        return newStr
+    } else {
+        return str
+    }
+}
 
+// console.log(checkScript("abcdScripta"))
 
 // 31. Write a JavaScript program to find the largest of three given integers.  
+function largestNum(num1, num2, num3){
+    let largest = num1;
+    if (num1 < num2) {
+        largest = num2;
+        return largest;
+    } else if(num1 < num3){
+        largest = num3;
+        return largest;
+    }
+    return largest;
+}
+
+// console.log(largestNum(57, 55, 99))
 
 
 // 32. Write a JavaScript program to find the closest value to 100 from two numerical values.  
