@@ -253,7 +253,7 @@ function addPy(str){
     }
 }
 
-// console.log(addPy("string"))
+// console.log(addPy("string"));
 
 // 22. Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.  
 function moveChar(str, index){
@@ -261,7 +261,7 @@ function moveChar(str, index){
     return newStr;
 }
 
-// console.log(moveChar('str', 0))
+// console.log(moveChar('str', 0));
 
 
 // 23. Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.  
@@ -274,7 +274,7 @@ function positionChange(str){
     }
 }
 
-// console.log(positionChange('kuiolj'))
+// console.log(positionChange('kuiolj'));
 
 
 // 24. Write a JavaScript program to create another string from a given string with the first character of the given string added to the front and back.  
@@ -299,7 +299,7 @@ function checkMultiple(num) {
     }
 }
 
-// console.log(checkMultiple(4))
+// console.log(checkMultiple(4));
 
 
 // 26. Write a JavaScript program to create a string from a given string. This is done by taking the last 3 characters and adding them at both the front and back. The string length must be 3 or more.  
@@ -308,7 +308,7 @@ function addLast3Char(str) {
     return newStr;
 }
 
-// console.log(addLast3Char("strabc"))
+// console.log(addLast3Char("strabc"));
 
 
 // 27. Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.  
@@ -326,9 +326,9 @@ function checktext(str){
 // 28. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them falls within the range.  
 function checkNum1(num1, num2){
     if ((55 <= num1 && num1 <= 99) || (55 <= num2 && num2 <= 99)) {
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
@@ -338,9 +338,9 @@ function checkNum1(num1, num2){
 // 29. Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the specified range.  
 function checkNum2(num1, num2, num3){
     if ((55 <= num1 && num1 <= 99) || (55 <= num2 && num2 <= 99) || (55 <= num3 && num3 <= 99)){
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
@@ -351,13 +351,13 @@ function checkNum2(num1, num2, num3){
 function checkScript(str){
     if (str.slice(4, 10) === "Script"){
         let newStr = str.slice(0, 4) + str.slice(10);
-        return newStr
+        return newStr;
     } else {
-        return str
+        return str;
     }
 }
 
-// console.log(checkScript("abcdScripta"))
+// console.log(checkScript("abcdScripta"));
 
 // 31. Write a JavaScript program to find the largest of three given integers.  
 function largestNum(num1, num2, num3){
@@ -372,25 +372,93 @@ function largestNum(num1, num2, num3){
     return largest;
 }
 
-// console.log(largestNum(57, 55, 99))
+// console.log(largestNum(57, 55, 99));
 
 
 // 32. Write a JavaScript program to find the closest value to 100 from two numerical values.  
+function close100(num1, num2){
+    let distance1;
+    let distance2;
+    if (num1 > 100){
+        distance1 = num1 - 100;
+    } else {
+        distance1 = 100 - num1;
+    }
+    if (num2 > 100){
+        distance2 = num2 - 100;
+    } else {
+        distance2 = 100 - num2;
+    }
+    if (distance1 > distance2){
+        return num2;
+    }
+    return num1;
+}
+
+// console.log(close100(90, 101));
 
 
 // 33. Write a JavaScript program to check whether two numbers are in the range 40..60 or 70..100 inclusive.  
+function checkRange2(num1, num2){
+    let str1 = "number 1 is in neither range";
+    let str2 = "number 2 is in neither range";
+    if (num1 > 40 && num1 < 60){
+        str1 = 'first number is in the range of 40-60';
+    } else if (num1 > 70 && num1 < 100){
+        str1 = 'first number is in the range of 70-100';
+    } 
+    if (num2 > 40 && num2 < 60){
+        str2 = 'second number is in the range of 40-60';
+    } else if (num2 > 70 && num2 < 100){
+        str2 = 'second number is in the range of 70-100';
+    } 
+    return `${str1} and ${str2}`;
+}
+
+// console.log(checkRange2(71, 41));
 
 
 // 34. Write a JavaScript program to find the largest number from the two given positive integers. The two numbers are in the range 40..60 inclusive.  
+//------easy will do later
 
 
 // 35. Write a program to check whether a specified character exists between the 2nd and 4th positions in a given string.  
+function checkCharRange(char, str){
+    if (str[1] === char || str[2] === char || str[3] === char){
+        return true;
+    } else{
+        return false;
+    }
+}
+// console.log(checkCharRange('a', 'sadrdd'));
 
 
 // 36. Write a JavaScript program that checks whether the last digit of three positive integers is the same.  
+function checkLastDigit(num1, num2, num3){
+    let str1 = String(num1);
+    let str2 = String(num2);
+    let str3 = String(num3);
+    if (str1[str1.length - 1] === str2[str2.length - 1] && str1[str1.length - 1] === str3[str3.length - 1]){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(checkLastDigit(5, 15, 2));
 
 
 // 37. Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters to upper case.  
+function lowerOrUpper(str){
+    if (str.length < 3){
+        return str.toUpperCase();
+    } else{
+        str = str.slice(0, 2).toLowerCase() + str.slice(2);
+        return str;
+    }
+}
+
+// console.log(lowerOrUpper('abcD'));
 
 
 // 38. Write a JavaScript program to evaluate a student's total marks across various examinations and determine their grade. The grading criteria are as follows:
