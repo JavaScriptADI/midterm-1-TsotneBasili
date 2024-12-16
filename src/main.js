@@ -484,9 +484,9 @@ function summ(num1, num2){
 // 40. Write a JavaScript program to check from two given integers whether one of them is 8 or their sum or difference is 8.  
 function check8(num1, num2){
     if (num1 === 8 || num2 === 8 || num1 - num2 === 8 || num2 - num1 === 8 || num1 + num2 === 8){
-        return true
+        return true;
     }
-    return false
+    return false;
 }
 
 // console.log(check8(8, 14));
@@ -503,7 +503,7 @@ function check3nums(num1, num2, num3){
     }
 }
 
-// console.log(check3nums(1, 3, 2))
+// console.log(check3nums(1, 3, 2));
 
 
 // 42. Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.  
