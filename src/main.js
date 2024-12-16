@@ -445,7 +445,7 @@ function checkLastDigit(num1, num2, num3){
     }
 }
 
-console.log(checkLastDigit(5, 15, 2));
+// console.log(checkLastDigit(5, 15, 2));
 
 
 // 37. Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters to upper case.  
@@ -468,17 +468,50 @@ function lowerOrUpper(str){
 // If the student achieves an A+ grade, the program should return 'true'; otherwise, it should return 'false'.
 
 
+
 // 39. Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80.  
+function summ(num1, num2){
+    let sum = num1 + num2;
+    if (sum > 50 && sum < 80){
+        return 65;
+    }
+    return 80;
+}
+
+// console.log(summ(5, 46));
 
 
 // 40. Write a JavaScript program to check from two given integers whether one of them is 8 or their sum or difference is 8.  
+function check8(num1, num2){
+    if (num1 === 8 || num2 === 8 || num1 - num2 === 8 || num2 - num1 === 8 || num1 + num2 === 8){
+        return true
+    }
+    return false
+}
+
+// console.log(check8(8, 14));
 
 
 // 41. Write a JavaScript program to check a set of three numbers; if the three numbers are the same return 30; otherwise return 20; and if two numbers are the same return 40.  
+function check3nums(num1, num2, num3){
+    if (num1 === num2 && num1 === num3){
+        return 30;
+    }else if(num1 === num2 || num1 === num3 || num2 === num3){
+        return 40;
+    } else {
+        return 20;
+    }
+}
+
+// console.log(check3nums(1, 3, 2))
 
 
 // 42. Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.  
 // Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
+
+
+
+
 
 
 // 43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.  
