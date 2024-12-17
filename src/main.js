@@ -622,15 +622,68 @@ function reverseString(str){
 
 
 // 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.  
+function changeAplh(str){
+    let newStr = '';
+    for (let i = 0; i < str.length; i++){
+        if (str[i] ==="z" || str[i] ==="Z"){
+            newStr += str[i];
+        } else{
+            newStr += String.fromCharCode(str.charCodeAt(i) + 1);
+        }
+        
+    }
+    return newStr
+}
+
+// console.log(changeAplh('abcz'))
 
 
 // 50. Write a JavaScript program to capitalize the first letter of each word in a given string.  
+function capitalizeF(str){
+    let newStr = '';
+    for (let i = 0; i < str.length; i++){
+        if (i === 0 || str[i - 1] === " "){
+            newStr += str[i].toUpperCase();
+        } else{
+            newStr += str[i];
+        }
+    }
+    return newStr;
+}
+
+// console.log(capitalizeF('i am the best  s'))
 
 
 // 51. Write a JavaScript application that transforms a provided numerical value into hours and minutes.  
 
 
 // 52. Write a JavaScript program to convert letters of a given string alphabetically.  
+function alphabetically(str){
+    let newStr = '';
+    let letter1 = str[0]
+    let firstT = Number(str.charCodeAt(str.indexOf(letter1)))
+    let iter = str.length;
+    for (let i = 0; i < iter; i++){
+        for (let j = 0; j < str.length; j++){
+            let letterJ = str[j]
+            if (firstT > str.charCodeAt(str.indexOf(letterJ))){
+                firstT = str.charCodeAt(str.indexOf(letterJ));
+            }
+        }
+        let letter = String.fromCharCode(firstT);
+        if (str.indexOf(letter) === 0){
+            str = str.slice(0, str.indexOf(letter) + 1) + str.slice(str.indexOf(letter) + 1);
+        } else {
+            str = str.slice(0, str.indexOf(letter)) + str.slice(str.indexOf(letter) + 1);
+        }
+
+        firstT = str.charCodeAt(str[0]);
+        newStr += letter;
+    }
+    return newStr;
+}
+
+// console.log(alphabetically('dcba ac a'))
 
 
 // 53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.  
