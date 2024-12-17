@@ -660,14 +660,17 @@ function capitalizeF(str){
 // 52. Write a JavaScript program to convert letters of a given string alphabetically.  
 function alphabetically(str){
     let newStr = '';
-    let letter1 = str[0]
-    let firstT = Number(str.charCodeAt(str.indexOf(letter1)))
+    let letter1 = str[0];
+    let index = str.indexOf(letter1);
+    let firstT = str.charCodeAt(index);
     let iter = str.length;
     for (let i = 0; i < iter; i++){
         for (let j = 0; j < str.length; j++){
-            let letterJ = str[j]
-            if (firstT > str.charCodeAt(str.indexOf(letterJ))){
-                firstT = str.charCodeAt(str.indexOf(letterJ));
+            let letterJ = str[j];
+            let index2 = str.indexOf(letterJ);
+
+            if (firstT > str.charCodeAt(index2)){
+                firstT = str.charCodeAt(index2);
             }
         }
         let letter = String.fromCharCode(firstT);
@@ -683,7 +686,7 @@ function alphabetically(str){
     return newStr;
 }
 
-// console.log(alphabetically('dcba ac a'))
+console.log(alphabetically('dcba ac a'))
 
 
 // 53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.  
