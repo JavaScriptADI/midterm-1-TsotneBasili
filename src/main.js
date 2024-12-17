@@ -515,22 +515,110 @@ function check3nums(num1, num2, num3){
 
 
 // 43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.  
+function rightMost(num1, num2, num3){
+    let str1 = String(num1);
+    let str2 = String(num2);
+    let str3 = String(num3);
+    let smallestDigit1 = Number(str1[0]);
+    let smallestDigit2 = Number(str2[0]);
+    let smallestDigit3 = Number(str3[0]);
+    for(let i = 0; i > str1.length; i++){
+        if (smallestDigit1 > Number(str1[i])){
+            smallestDigit1 = Number(str1[i]);
+        }
+    }
+    for(let i = 0; i > str2.length; i++){
+        if (smallestDigit2 > Number(str2[i])){
+            smallestDigit2 = Number(str2[i]);
+        }
+    }
+    for(let i = 0; i > str3.length; i++){
+        if (smallestDigit3 > Number(str3[i])){
+            smallestDigit3 = Number(str3[i]);
+        }
+    }
+    if (smallestDigit1 === smallestDigit2 || smallestDigit1 === smallestDigit3 || smallestDigit2 === smallestDigit3){
+        return true;
+    }
+    return false;
+}
+
+// console.log(rightMost(21, 99, 43));
 
 
 // 44. Write a JavaScript program that evaluates three given integers to determine if any one of them is greater than or equal to 20 and less than at least one of the other two.  
+function checkAgain(num1, num2, num3){
+    if (num1 >= 20){
+        if (num1 < num2 || num1 < num3){
+            return true
+        }
+    }
+    if (num2 >= 20){
+        if (num2 < num1 || num2 < num3){
+            return true
+        }
+    }
+    if (num3 >= 20){
+        if (num3 < num2 || num3 < num1){
+            return true
+        }
+    }
+    return false
+}
+
+// console.log(checkAgain(40, 21, 3))
 
 
 // 45. Write a JavaScript program that checks two integer values and returns true if either one is 15 or if their sum or difference is 15.  
+function check15(num1, num2){
+    if (num1 === 15 || num2 === 15 || num1 - num2 === 15 || num2 - num1 === 15 || num1 + num2 === 15){
+        return true;
+    }
+    return false;
+}
+
+// console.log(check15(29, 14));
 
 
 // 46. Write a JavaScript program to check two given non-negative integers if one (not both) is a multiple of 7 or 11.  
+function checkMultiple2(num) {
+    if (num % 11 === 0 && num % 7 === 0){
+        return 'number is multiple of both 11 and 7';
+    } else if(num % 11 === 0){
+        return 'number is multiple of 11';
+    } else if(num % 7 === 0){
+        return 'number is multiple of 7';
+    } else {
+        return 'number is multiple of none of 11 or 7';
+    }
+}
+
+// console.log(checkMultiple2(49));
 
 
 // 47. Write a JavaScript program to check whether a given number exists in the range 40..10000.  
 // For example 40 presents in 40 and 4000
+function rangeOfnum(num1){
+    if (num1 >= 40 && num1 <= 10000){
+        return true;
+    }
+    return false;
+}
+
+// console.log(rangeOfnum(10001));
 
 
 // 48. Write a JavaScript program to reverse a given string.  
+function reverseString(str){
+    let iter = str.length;
+    let netStr =''
+    for (let i = iter-1; i >= 0; i--){
+        netStr += str[i];
+    }
+    return netStr
+}
+
+// console.log(reverseString("esrever"))
 
 
 // 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.  
